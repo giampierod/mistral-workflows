@@ -8,7 +8,7 @@ Services:
 Events:
   mysql_memory_high:
     trigger: nagios-high-memory
-    on-trigger: try-repair-mysql (host => {$.nagios-high-memory.host})
+    on-trigger: repair-mysql-memory-high (host => {$.nagios-high-memory.host})
 
 Workflows: 
   repair-mysql-memory-high:
